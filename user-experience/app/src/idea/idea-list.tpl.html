@@ -1,0 +1,49 @@
+<div ng-controller="ideaListCtr as ic">
+  <div class="container">
+    <div class="row">
+      <div>
+        <a class="navbar-brand" href="#/idea/create"><i class="glyphicon glyphicon-plus"></i> Post Idea </a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" ng-show="ic.ideas.length > 0">
+
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Ideas</div>
+          <!-- Table -->
+          <table class="table">
+            <thead>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Comments</th>
+            <th></th>
+            <th>Status</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="idea in ic.ideas">
+              <td>{{idea.title}}</td>
+              <td>{{idea.description}}</td>
+              <td>{{idea.commentsCount}}</td>
+              <td>
+                <a class="navbar-brand" ng-click="thumbsUp(idea)">{{idea.thumbsUp}} <i class="glyphicon glyphicon-thumbs-up"></i></a>
+                <a class="navbar-brand" ng-click="thumbsDown(idea)">{{idea.thumbsDown}} <i class="glyphicon glyphicon-thumbs-down"></i></a>
+                <a class="navbar-brand" href="#/idea/review/{{idea.id}}"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+              </td>
+              <td>{{idea.status}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-12" ng-show="ic.ideas.length == 0">
+        <div class="col-md-12">
+          <h4>No Ideas added yet</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

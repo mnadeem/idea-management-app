@@ -1,0 +1,75 @@
+<div ng-controller="ideaReviewCtr as ic">
+
+  <div class="container">
+    <div class="row">
+      <div>
+        <a class="navbar-brand" href="#/Ideas"><i class="glyphicon glyphicon-th-list"></i> List Ideas </a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+  </div>
+
+  <div class="panel panel-warning">
+    <div class="panel-heading">Review Idea</div>
+    <div class="panel-body">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-5">
+
+                <select name="status" ng-model="idea.status">
+                  <option value="New">New</option>
+                  <option value="Candidate">Candidate</option>
+                  <option value="Abandoned">Abandoned</option>
+                  <option value="Closed">Closed</option>
+                  <option value="Concept">Concept</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="list-group">
+            <a class="list-group-item">
+              <h4 class="list-group-item-heading">Title</h4>
+
+              <p class="list-group-item-text">{{idea.title}}</p>
+            </a>
+            <a class="list-group-item ">
+              <h4 class="list-group-item-heading">Description</h4>
+
+              <p class="list-group-item-text">{{idea.description}}</p>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-5">
+
+              <a href="#/" class="btn">Cancel</a>
+              <button ng-click="update(idea);" class="btn btn-primary">Update</button>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

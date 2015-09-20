@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Idea Bank Application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+	<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- endbuild -->
+
+
+  </head>
+  <!--[if lt IE 7]>
+  <body class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="idb-idb" ng-strict-di> <![endif]-->
+  <!--[if IE 7]>
+  <body class="no-js lt-ie9 lt-ie8" ng-app="idb-idb" ng-strict-di> <![endif]-->
+  <!--[if IE 8]>
+  <body class="no-js lt-ie9" ng-app="idb-idb" ng-strict-di> <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <body ng-app="idb-idb" ng-strict-di><!--<![endif]-->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand page-scroll" href="#">
+          <img src="images/idb.png" alt="" class="img-responsive">
+      </a>
+    </div>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Idea Bank</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <!--<ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+      </ul>-->
+      <form class="navbar-form navbar-left" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div><!-- /input-group -->
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nadeem <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Sign Out</a></li>
+            <li><a href="#">Profile</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+	<!-- Add your site or application content here -->
+    <div class="container">
+      <div ui-view></div>
+    </div>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="vendor/es5-shim/es5-shim.js"></script>
+    <script src="vendor/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/angular-cookies/angular-cookies.js"></script>
+    <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="vendor/angular-animate/angular-animate.js"></script>
+    <script src="vendor/angular-touch/angular-touch.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+	<script src="src/app.js"></script>
+  <script src="src/idea/app.js"></script>
+  <script src="src/idea/controllers.js"></script>
+  <script src="src/idea/services.js"></script>
+  <script src="src/idea/config.js"></script>
+
+	<script src="src/components/app.js"></script>
+	<script src="src/components/confirmation/app.js"></script>
+	<script src="src/components/confirmation/directives.js"></script>
+	<script src="src/components/confirmation/controllers.js"></script>
+
+
+	<script src="src/config.js"></script>
+	<script src="generated/scripts/templates.js"></script>
+
+	<!-- endbuild -->
+</body>
+</html>

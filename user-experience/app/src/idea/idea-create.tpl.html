@@ -1,0 +1,75 @@
+<div class="view" ng-controller="ideaCreateCtr">
+
+  <div class="container">
+    <div class="row">
+      <div>
+        <a class="navbar-brand" href="#/Ideas"><i class="glyphicon glyphicon-th-list"></i> List Ideas </a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+  </div>
+
+
+  <div class="panel panel-success">
+
+
+    <!-- Default panel contents -->
+    <div class="panel-heading">Post New Idea</div>
+    <div class="panel-body">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12">
+            <form role="form" name="ideaForm" class="form-horizontal">
+              <div class="row">
+                <div class="form-group" ng-class="{error: ideaForm.title.$invalid}">
+                  <label class="col-md-2"> Title </label>
+
+                  <div class="col-md-4">
+                    <input name="title" ng-model="idea.title" type="text" class="form-control" placeholder="Title"
+                           required/>
+                    <span ng-show="ideaForm.title.$dirty && ideaForm.title.$invalid"
+                          class="help-inline">Title Required</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2"> Description </label>
+
+                  <div class="col-md-4">
+                    <textarea class="form-control" rows="5"  name="description" ng-model="idea.description" placeholder="Description" required></textarea>
+
+                <span
+                  ng-show="ideaForm.description.$dirty && ideaForm.description.$invalid && !ideaForm.description.$error.description"
+                  class="help-inline">Description Required</span>
+                    <span ng-show="ideaForm.description.$error.description" class="help-inline">Email is not valid</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-2"></label>
+
+                  <div class="col-md-4">
+                    <a href="#/" class="btn">Cancel</a>
+                    <button ng-click="saveIdea(idea);"
+                            ng-disabled=" ideaForm.$invalid"
+                            class="btn btn-primary">Create
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+

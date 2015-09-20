@@ -1,0 +1,5 @@
+.navbar-brand > img {
+  object-fit: contain;
+  max-height: 100%;
+  height: 100%;
+}
